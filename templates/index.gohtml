@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>SIMPLE TODOLIST APPLICATION</title>
+</head>
+<body>
+<h1>{{ .Title }}</h1>
+
+<ul>
+    {{ range .Todos}}
+        {{ if .Done }}
+            <li class="done">{{ .Item }}</li>
+        {{ else }}
+            <li>{{ .Item }}</li>
+        {{ end}}
+    {{ end}}
+</ul>
+
+<script src="/static/js/script.js"></script>
+</body>
+</html>
